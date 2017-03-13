@@ -1,6 +1,20 @@
-<h1>Editing Article</h1>
+<div class="container-fluid">
 
-<%= render 'form', article: @article %>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>Editar Noticia</h1>
+    </div>
+  </div>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <%= render 'form', article: @article %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'Volver', articles_path %>
+    </div>
+  </div>
+</div>
