@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1">
+      <h1>Últimas Noticias</h1>
+    </div>
+  </div>
+
+
+  <% Article.all.each do |article| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1">
+        <hr>
+        <div class="hero-unit">
+          <h6><%= article.created_at %></h6>
+          <h2><strong><%= article.title %></strong></h2>
+          <p class="lead"><%= article.lead %></p>
+          <p><%= article.body %></p>
+          <td><%= link_to 'Show', article %></td>
+        </div>
+      </div>
+
+    </div>
+
+  <% end %>
+
+
+</div>
