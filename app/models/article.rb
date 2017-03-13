@@ -11,7 +11,8 @@ class Article < ApplicationRecord
     if(body.length <= 1000)
       return body
     else
-      return body.first(1000) + body[1000, body[1000..-1].index(' ')] + '...'
+      #return body.first(1000) + body[1000, body[1000..-1].index(' ')] + '...'
+      return body[0, body.first(1000).rindex(' ')] + '...'
     end
   end
 
