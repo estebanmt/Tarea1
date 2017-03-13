@@ -1,4 +1,6 @@
-<%= form_for(article) do |f| %>
+<%= form_for(article, :html => {:class => "form-horizontal"}) do |f| %>
+    <div class="form-horizontal">
+      <fieldset>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -11,22 +13,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <div class="form-group">
+      <%= f.label 'Titulo', class: "control-label col-md-4" %>
+      <div class="col-md-8">
+        <%= f.text_field :title, class:'form-control' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :lead %>
-    <%= f.text_field :lead %>
-  </div>
+    <div class="form-group">
+        <%= f.label 'Bajada', class: "control-label col-md-4" %>
+        <div class="col-md-8">
+          <%= f.text_area :lead, class:'form-control', rows:'3' %>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-  </div>
+    <div class="form-group">
+        <%= f.label 'Cuerpo', class: "control-label col-md-4" %>
+        <div class="col-md-8">
+          <%= f.text_area :body, class:'form-control', rows:'10' %>
+        </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="form-group">
+        <div class="actions">
+          <div class="col-md-8">
+          <%= f.submit 'Crear Noticia' %>
+          </div>
+        </div>
+      </div>
+      </fieldset>
+</div>
 <% end %>
