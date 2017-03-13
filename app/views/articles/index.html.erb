@@ -1,29 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h1>Noticias</h1>
+  </div>
+</div>
 
 <div class="container-fluid">
-  <h2>Noticias</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-  <table class="table">
-    <thead>
-      <th>Noticia</th>
-      <th>Fecha</th>
-      <th>Acciones</th>
-    </thead>
-    <tbody>
-    <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.created_at %></td>
-      <td><%= link_to 'Editar', edit_article_path(article) %>
-      <%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Estas seguro??' } %></td>
-    </tr>
-    <% end %>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    <table class="table">
+      <thead>
+        <th>Noticia</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </thead>
+      <tbody>
+      <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.created_at %></td>
+        <td><%= link_to 'Editar', edit_article_path(article) %> -
+        <%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Estas seguro??' } %></td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 
 <br>
 
-<%= link_to 'Agregar Noticia', new_article_path %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <%= link_to 'Crear Noticia', new_article_path %>
+  </div>
+</div>
