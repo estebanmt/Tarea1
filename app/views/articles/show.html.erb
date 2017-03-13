@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <div class="row text-justify">
+    <div class="col-md-8 col-md-offset-1">
+      <hr>
+      <div class="hero-unit">
+        <h6><%= @article.created_at %></h6>
+        <h2><strong><%= @article.title %></strong></h2>
+        <p class="lead"><%= @article.lead %></p>
+        <p><%= @article.body %></p>
+      </div>
+    </div>
 
-<p>
-  <strong>Lead:</strong>
-  <%= @article.lead %>
-</p>
+  </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
+  <%= link_to 'Volver', pages_home_path %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+</div>
