@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @articles = Article.all.reverse_order.first(10)
+    @articles = Article.newest10
   end
 end
