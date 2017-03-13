@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
   get 'pages/home'
 
   resources :articles

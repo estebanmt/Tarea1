@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  text: MyString
+  body: MyText
+  article: one
 
 two:
   name: MyString
-  text: MyString
+  body: MyText
+  article: two
