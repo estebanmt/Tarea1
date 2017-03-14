@@ -20,4 +20,13 @@ class Article < ApplicationRecord
     end
   end
 
+  # Returns a descriptive string if there are no comments in an article
+  def commentString
+    if(comments.length <= 0)
+      return 'No hay comentarios'
+    else
+      return ''
+    end
+  end
+
 end
