@@ -29,4 +29,8 @@ class Article < ApplicationRecord
     end
   end
 
+  def localTime
+    return created_at.change(:offset => "-0300")
+  end
+
 end

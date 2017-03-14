@@ -5,7 +5,7 @@
     <div class="col-md-8 col-md-offset-1">
       <hr>
       <div class="hero-unit">
-        <h6><%= @article.created_at.localtime %></h6>
+        <h6><%= @article.created_at %></h6>
         <h2><strong><%= @article.title %></strong></h2>
         <p class="lead"><%= @article.lead %></p>
         <p><%= simple_format(@article.body) %></p>
