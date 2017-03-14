@@ -14,9 +14,15 @@
 
   </div>
 
-
-  <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
-  <%= render partial: 'comments/form' %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1">
+      <hr>
+      <h3>Comentarios</h3>
+      <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
+      <hr>
+      <%= render partial: 'comments/form' %>
+    </div>
+  </div>
 
   <%= link_to 'Volver', pages_home_path %>
 
