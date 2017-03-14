@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   validates :lead, presence: true, length: { maximum: 250 }
   validates :body, presence: true
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   # Returns 10 newest articles
   def self.newest10
