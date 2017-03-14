@@ -16,7 +16,7 @@
           <h6><%= article.created_at %></h6>
           <h2><strong><%= article.title %></strong></h2>
           <p class="lead"><%= article.lead %></p>
-          <p><%= article.firstThousand %></p>
+          <p><%= simple_format(article.firstThousand) %></p>
           <br>
           <td><%= link_to 'Ver Noticia', article %></td>
           <h5><span class="glyphicon glyphicon-comment"></span> <%= article.comments.size %> </h5>
