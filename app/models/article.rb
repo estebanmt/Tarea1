@@ -3,10 +3,14 @@ class Article < ApplicationRecord
   validates :lead, presence: true, length: { maximum: 250 }
   validates :body, presence: true
 
+  has_many :comments
+
+  # Returns 10 newest articles
   def self.newest10
     return Article.all.reverse_order.first(10)
   end
 
+  # Returns article body up to the last word before the 1000th char
   def firstThousand
     if(body.length <= 1000)
       return body

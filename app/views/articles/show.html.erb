@@ -14,6 +14,10 @@
 
   </div>
 
+
+  <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
+  <%= render partial: 'comments/form' %>
+
   <%= link_to 'Volver', pages_home_path %>
 
 </div>
